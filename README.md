@@ -28,4 +28,14 @@ I would like you to complete what you can prior to next Wednesday's Lecture.
 
 * Modify the cannon ball program to calculate the number of cannon balls in a layer by figureing out the number of cannon balls in a row.  Then add in memoization to help this proces go quicker.  (This is to get you comfortable with the concept with a problem you already have experience with.)
 * Write a program to find the smalest cost to travel from the top of an equalateral triangle to the bottom.  Your program should ask for the number of rows, and then should expect the correct number of numbers to follow that (first line has one number, the next has 2, and it increases by 1 each step.)  This is the problem we talked about on the board.  You may want to look at two deminsional arrays to help with this (but they are nto required.)
+~~~
+  Pick the path based on:  cheapest under current selection   |  keep track of minimal value to get to a spot
+      5                               5                       |                 5
+     3 6                             3                        |               8   11
+    3 4 1                           2                         |             11  12  12
+   4 9 3 1                         4                          |           15  20  15  13  
+  4 2 1 5 2                         2                         |         19  17  16  18  15
+
+Notice that the greedy option (taking the smallest that is availabe to us each step) is not the best we can do.  In fact we want the items down the right hand edge for the minimum cost to get to the bottom of this triangle.
+~~~
 * Write a program that when given a sequence of integers (not nessicarilly positive) will find the maximum sum of a connected segment of them.  Your program will be given a number when it is run to say how many numbers it should pull in to be computing this on.  It will then be given that number of numbers. I strongly suggest working out on paper how you would approach this problem, and then try to see how to shift that approach to small enough steps the computer could do them. Ex:  5    3 -4  2 -1 5      
