@@ -1,0 +1,39 @@
+import javax.swing.JOptionPane;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		String input = JOptionPane.showInputDialog("Enter string to test if it is a palendrome");
+		int a = 0;
+		int z = input.length()-1;
+
+		System.out.println("Is " + input + " a palendrome?: " + palendrome(input, a, z));
+
+	}
+
+	public static boolean palendrome(String input, int a, int z) {
+		int b=a;
+		int y=z;
+		if (b == y )
+		{
+			return (true);
+		}
+		else if (b != y)
+		{
+			if (input.charAt(b)==input.charAt(y) && y>0)
+			{
+				b=b+1;
+				y=y-1;
+				palendrome(input, b, y);
+			}
+			else
+			{
+				return (false);
+			}
+			
+		}
+		return (true);
+
+	}
+
+}
