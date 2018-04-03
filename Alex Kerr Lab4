@@ -1,0 +1,81 @@
+import java.util.Scanner;
+public class LAB4
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("what word do you want me to reverse? ");
+
+        String x = input.nextLine();
+        System.out.println(reverse(x));
+
+        System.out.println("What temp do you want to covert forom Fahrenheit to Celsius? ");
+        double y = input.nextDouble();
+        System.out.println(FtoC(y) + " degrees celsius");
+
+        System.out.println("what number do you what the factorial of?");
+        int z = input.nextInt();
+        System.out.println(Factoral(z));
+
+        
+        System.out.println("how many rows of cannonballs do you have?");
+        int aa = input.nextInt();
+        System.out.println(Cannonball(aa));
+    }
+
+    private static String reverse(String x)
+    {
+        String result = "";
+
+        char a;
+        int countDown = x.length();
+        for( int i=0; i < x.length(); i = i + 1)
+        {
+            a = x.charAt(countDown -1);
+            result = result + a;
+            countDown--;
+        }
+        return result;
+    }
+    private static double FtoC (double y)
+    {
+        double result = 0;
+        result = y - 32;
+
+        return result;
+    }
+    private static int Factoral (int x)
+    {
+        int result = 1;
+        for(int i = 1; i<= x; i++)
+        {
+            result = result * i;
+        }
+        return result;
+    }
+    private static int Cannonball (int x)
+    {
+        int result = 0;
+        int sum = x;
+        if(x >= 2)
+        {
+            for (int i = 2; i <= x; i++)
+            {
+                sum = 0;
+                sum = sum * 3;
+                result = result + sum;
+            }
+        }
+        if(x == 0)
+        {
+            result = 0;
+        }
+        if(x ==1)
+        {
+            result = 1;
+        }
+
+        return result;
+    }
+}
